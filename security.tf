@@ -2,6 +2,9 @@ resource "aws_security_group" "class-security" {
     name = "class-security-group"
     description = "Allow SSH Access"
     
+    tags = {
+        Name = "nginx-security"
+    }
 
 
 ingress {
