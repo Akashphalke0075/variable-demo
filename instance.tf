@@ -1,5 +1,15 @@
-# resource "aws_instance" 'class-nginx" {
-#     ami = "ami-0b5eea76982371e91"
-#     instance_type = "t2.micro"
-#     vpc_security_group_ids = aws_security_group.class-security.id
-# }
+resource "aws_instance" 'class-nginx" {
+    ami = var.aws_ami
+    instance_type = var.instance_type
+    vpc_security_group_ids = aws_security_group.class-security.id
+
+    user_data = <<-EOF
+        #!/bin/bash
+        sudo apt update -y &&
+        sudo apt install -y nginx
+        echo "<h1>Welcome to Terraform nginx-demo</h1>" > /var/www/html/index.html
+        EOF
+  tags = {
+    "Name" = var.nginx-instance
+  }
+}
