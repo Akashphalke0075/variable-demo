@@ -1,7 +1,7 @@
 resource "aws_instance" 'class-nginx" {
     ami = var.aws_ami
     instance_type = var.instance_type
-    vpc_security_group_ids = aws_security_group.class-security.id
+    vpc_security_group_ids = [aws_security_group.class-security.id]
 
     user_data = <<-EOF
         #!/bin/bash
