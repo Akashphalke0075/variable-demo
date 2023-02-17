@@ -23,7 +23,7 @@ variable "aws_name" {
     default = "nginx-server-new"
 }
 
-variable "aws-ami" {
+variable "aws_ami" {
     type = string 
     default = "ami-0b93ce03dcbcb10f6"
 }

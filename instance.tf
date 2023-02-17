@@ -15,7 +15,7 @@
 # }
 
 resource "aws_instance" "class-ec2-server-p" {
-  ami = var.aws-ami
+  ami = var.aws_ami
   instance_type = var.instance_type
   vpc_security_group_ids = ["aws_security_group.new-security-sg.id"]
 
