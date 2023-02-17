@@ -10,6 +10,6 @@ resource "aws_instance" "class-nginx" {
         echo "<h1>Welcome to Terraform nginx-demo</h1>" > /var/www/html/index.html
         EOF
   tags = {
-    "Name" = var.nginx-instance
+    "Name" = var.instance_name
   }
 }
