@@ -3,6 +3,10 @@ resource "aws_instance" "class-server-ec2" {
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.class-sg-server.id]
 
+     tags = {
+    "Name" = "ec2-server"
+  }
+
   user_data = <<-EOF
   #!/bin/bash
   sudo apt update -y &&
@@ -10,8 +14,5 @@ resource "aws_instance" "class-server-ec2" {
   echo "<h1>Welcome to Terraform akash nginx-demo</h1>" > /var/www/html/index.html
   EOF
 
-   tags = {
-    "Name" = "ec2-server"
-  }
 
 }
