@@ -2,6 +2,10 @@ resource "aws_security_group" "class-sg" {
     name = "class-sg-all"
     description = "Allow SSH Access"
 
+    tags = {
+        Name = "variable-security-group"
+    }
+
     ingress {
         from_port = 22
         to_port = 22
