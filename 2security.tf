@@ -1,4 +1,4 @@
-resource "aws_security_group" "class-sg" {
+resource "aws_security_group" "class-sg-server" {
     name = "class-sg-all"
     description = "Allow SSH Access"
 
