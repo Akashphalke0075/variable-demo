@@ -1,10 +1,10 @@
 resource "aws_instance" "class-server-ec2" {
-    ami = "ami-0b93ce03dcbcb10f6"
-    instance_type = "t2.micro"
+    ami = var.aws_ami
+    instance_type = var.new_instance
     vpc_security_group_ids = [aws_security_group.class-sg-server.id]
 
      tags = {
-    "Name" = "ec2-server"
+    "Name" = var.aws_name
   }
 
   user_data = <<-EOF
