@@ -1,5 +1,5 @@
 resource "aws_security_group" "class-sg-server" {
-    name = "class-sg-all"
+    name = "akash-class-sg-all"
     description = "Allow SSH Access"
 
     tags = {
