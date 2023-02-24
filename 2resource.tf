@@ -1,6 +1,6 @@
 resource "aws_instance" "class-server-ec2" {
     ami = var.aws_ami
-    instance_type = var.new_instance[0]
+    instance_type = var.new_instance[2]
     vpc_security_group_ids = [aws_security_group.class-sg-server.id]
 
      tags = {
