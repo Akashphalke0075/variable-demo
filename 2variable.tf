@@ -11,6 +11,17 @@ variable "new_instance" {
     }
 }
 
+variable "aws_tags" {
+    type = map
+    default = {
+        "dev" = "dev-12"
+        "prdo" = "prodo-12"
+        "mana" = "mana-12"
+    }
+
+}
+
+
 variable "aws_ami" {
     default = "ami-0b93ce03dcbcb10f6"
 }

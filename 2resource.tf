@@ -3,9 +3,7 @@ resource "aws_instance" "class-server-ec2" {
     instance_type = var.new_instance["prod"]
     vpc_security_group_ids = [aws_security_group.class-sg-server.id]
 
-     tags = {
-    "Name" = var.aws_name
-  }
+     tags = var.aws_tags
 
   user_data = <<-EOF
   #!/bin/bash
