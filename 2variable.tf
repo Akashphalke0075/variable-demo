@@ -5,6 +5,7 @@ variable "aws_name" {
 variable "new_instance" {
     type = map
     default = {
+        "Name" = "new-nst"
         "dev" = "t1.micro"
         "test" = "t2.micro"
         "prod" = "t3.micro"
