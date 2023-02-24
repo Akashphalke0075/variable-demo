@@ -3,7 +3,7 @@ variable "aws_name" {
 }
 
 variable "new_instance" {
-    type = map(string)
+    type = list(string)
     default = {
         "dev" = "t1.micro"
         "test" = "t2.micro"
