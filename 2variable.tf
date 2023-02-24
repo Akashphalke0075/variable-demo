@@ -14,7 +14,7 @@ variable "new_instance" {
 variable "aws_tags" {
     type = map
     default = {
-        "Name" = "new-nst"
+        "name" = "new-nst"
         "dev" = "dev-12"
         "prdo" = "prodo-12"
         "mana" = "mana-12"
