@@ -1,1 +1,1 @@
-aws_name = "autodev"
+# aws_name = "autodev"

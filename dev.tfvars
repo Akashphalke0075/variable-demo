@@ -1,1 +1,1 @@
-aws_name = "devdept"
+# aws_name = "devdept"

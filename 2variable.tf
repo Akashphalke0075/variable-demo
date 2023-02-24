@@ -3,7 +3,8 @@ variable "aws_name" {
 }
 
 variable "new_instance" {
-    default = "t2.micro"
+    type = list(string)
+    default = ["t2.micro" , "t1.micro" , "t3.micro" ]
 }
 
 variable "aws_ami" {
