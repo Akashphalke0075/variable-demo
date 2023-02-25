@@ -2,14 +2,14 @@ variable "aws_name" {
     default = "nginx-server"
 }
 
-variable "new_instance" {
-    type = map
-    default = {
-        "dev" = "t1.micro"
-        "test" = "t2.micro"
-        "prod" = "t3.micro"
-    }
-}
+# variable "new_instance" {
+#     type = map
+#     default = {
+#         "dev" = "t1.micro"
+#         "test" = "t2.micro"
+#         "prod" = "t3.micro"
+#     }
+# }
 
 variable "aws_tags" {
     type = map
