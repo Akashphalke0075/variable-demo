@@ -24,7 +24,7 @@ variable "aws_tags" {
 
 
 variable "aws_ami" {
-    default = "ami-0b93ce03dcbcb10f6"
+    default = "kmi-0b93ce03dcbcb10f6"
 }
 
 variable "aws_region" {
