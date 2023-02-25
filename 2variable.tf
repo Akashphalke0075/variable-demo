@@ -36,3 +36,13 @@ variable "aws_ami" {
 variable "aws_region" {
     default = "us-east-1"
 }
+
+variable "new_instance" {
+    type = string
+    default = "t2.micro"
+
+    validation {
+        error_message = "only t1.micro, t2.micro and t3.small are allowed"
+        condition = contains (["t1.micro", "t2.micro" , "t3.small"], var.new_instance)
+    }
+}
