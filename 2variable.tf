@@ -28,6 +28,7 @@ variable "aws_ami" {
 
      validation {
       condition = length(var.aws_ami)>4 && substr(var.aws_ami, 0, 4) == "ami-"
+      error_message = "enter valid ami"
     }
 
 }
