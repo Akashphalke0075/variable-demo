@@ -26,6 +26,10 @@ variable "aws_tags" {
 variable "aws_ami" {
     default = "kmi-0b93ce03dcbcb10f6"
 
+     validation {
+      condition = length(var.aws_ami)>4 && substr(var.aws_ami, 0, 4) == "ami-"
+    }
+
 }
 
 variable "aws_region" {
